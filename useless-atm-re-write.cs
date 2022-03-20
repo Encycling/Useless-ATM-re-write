@@ -31,13 +31,20 @@ if(pinReader == PIN){
     // Im using switch statements instead of a bunch of if statements to clean up my code
     switch(choice){
         case 1:
-            Console.WriteLine("Please enter the amount of money you would like to deposit:");
-            int dpAm = int.Parse(Console.ReadLine());
+            Console.WriteLine("Please enter the amount of money you would like to deposit (Please choose an amount that is higher than $100.):");
+            int dpAm = Convert.ToInt32(Console.ReadLine());
             // To calculate the total, you add the balance with the amount of money the user wants to deposit
             int dpTotal = balance + dpAm;
-            Console.ForegroundColor = ConsoleColor.Green;
-            // Use "thingy" + variable + "thingy" so that you can print stuff, and add variables.
-            Console.WriteLine("You have successfully deposited " + dpAm + ", and your current balance is now $" + dpTotal + ".");
+            // If they have an amount that is less that 100, it will stop working.
+            if(dpAm >= 100){
+                Console.ForegroundColor = ConsoleColor.Green;
+                // Use "thingy" + variable + "thingy" so that you can print stuff, and add variables.
+                Console.WriteLine("You have successfully deposited " + dpAm + ", and your current balance is now $" + dpTotal + ".");
+            }
+            else{
+                Console.ForegroundColor = ConsoleColor.Red;
+                Console.WriteLine("Insufficient funds.");
+            }
             Console.ForegroundColor = ConsoleColor.White;
         break;
         case 2:
@@ -45,8 +52,15 @@ if(pinReader == PIN){
             int wdAm = Convert.ToInt32(Console.ReadLine());
             // Basically the same thing as deposit. You subtract the balance to the amount of money the user wants to take out.
             int wdTotal = balance - wdAm;
-            Console.ForegroundColor = ConsoleColor.Green;
-            Console.WriteLine("You have successfully withdrawled $" + wdAm + ", and your current balance is now" + wdTotal + ".");
+            // Also the same thing as deposit.
+            if(wdAm >= 50){
+                Console.ForegroundColor = ConsoleColor.Green;
+                Console.WriteLine("You have successfully withdrawled $" + wdAm + ", and your current balance is now" + wdTotal + ".");
+            }
+            else{
+                Console.ForegroundColor = ConsoleColor.Red;
+                Console.WriteLine("The amount in less that $50!");
+            }
             Console.ForegroundColor =ConsoleColor.White;
         break;
         case 3:
