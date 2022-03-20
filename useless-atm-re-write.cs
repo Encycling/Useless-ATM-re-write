@@ -24,7 +24,7 @@ if(pinReader == PIN){
     Console.ForegroundColor = ConsoleColor.Green;
     Console.WriteLine("PIN Correct!\nYour current balance is $500.");
     Console.ForegroundColor = ConsoleColor.White;
-    Console.WriteLine("Please enter the number of your choice.\n1. Deposit\n2. Withdrawl\n3. Change Pin\n4. Check Current Balance\n");
+    Console.WriteLine("Please enter the number of your choice.\n1. Deposit\n2. Withdrawl\n3. Change Pin\n4. Check Current Balance\nEnter your choice:");
     choice = Convert.ToInt32(Console.ReadLine());
     // Depending on the number they chose, it will execute the command. For an example:
     // If they chose 1, which is Deposit, it will give them the code for deposting money.
@@ -42,7 +42,6 @@ if(pinReader == PIN){
                 Console.WriteLine("You have successfully deposited " + dpAm + ", and your current balance is now $" + dpTotal + ".");
             }
             else{
-                Console.ForegroundColor = ConsoleColor.Red;
                 Console.WriteLine("Insufficient funds.");
             }
             Console.ForegroundColor = ConsoleColor.White;
@@ -55,7 +54,7 @@ if(pinReader == PIN){
             // Also the same thing as deposit.
             if(wdAm >= 50){
                 Console.ForegroundColor = ConsoleColor.Green;
-                Console.WriteLine("You have successfully withdrawled $" + wdAm + ", and your current balance is now" + wdTotal + ".");
+                Console.WriteLine("You have successfully withdrawled $" + wdAm + ", and your current balance is now " + wdTotal + ".");
             }
             else{
                 Console.ForegroundColor = ConsoleColor.Red;
