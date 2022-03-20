@@ -9,3 +9,4 @@ Change logs -
 3/19/2022
 1. i forgot to add this, but basically if you deposit less than 100 dollars, the program will stop. this was included in the original tutorial, but i forgot to add this for some reason lol
 2. I added the same thing for withdrawl, but if you withdrawl less than 50 dollars, it will stop.
+3. added a forgotten space in the withdrawl segment
