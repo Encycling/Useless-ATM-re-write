@@ -16,7 +16,11 @@ int choice;
 
 // If they enter the pin correctly, it will execute the main code
 // rememember that \n means that the it will go to a new line, without making a new print statement
-Console.WriteLine("Welcome the to Useless ATM re-write!\nPlease enter your pin:");
+Console.ForegroundColor = ConsoleColor.Cyan;
+Console.WriteLine("Welcome the to Useless ATM re-write!");
+Console.WriteLine("Please enter your pin:");
+Console.ForegroundColor = ConsoleColor.White;
+
 pinReader = Convert.ToInt32(Console.ReadLine());
 // It will compare the pin written by the user to the actual correct pin.
 if(pinReader == PIN){
@@ -58,7 +62,7 @@ if(pinReader == PIN){
             }
             else{
                 Console.ForegroundColor = ConsoleColor.Red;
-                Console.WriteLine("The amount is less that $50!");
+                Console.WriteLine("The amount in less that $50!");
             }
             Console.ForegroundColor =ConsoleColor.White;
         break;
