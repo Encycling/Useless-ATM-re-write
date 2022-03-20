@@ -58,7 +58,7 @@ if(pinReader == PIN){
             }
             else{
                 Console.ForegroundColor = ConsoleColor.Red;
-                Console.WriteLine("The amount in less that $50!");
+                Console.WriteLine("The amount is less that $50!");
             }
             Console.ForegroundColor =ConsoleColor.White;
         break;
